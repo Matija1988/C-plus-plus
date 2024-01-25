@@ -34,16 +34,44 @@ int main()
     string tekst;
     getline(cin, tekst);
 
-    for (char znak : tekst) {
+
+    size_t pozicija = tekst.find_first_not_of(' ');
+
+
+    while (pozicija != string::npos) {
+
+        char slovo = tekst[pozicija];
+        char velikoSlovo = toupper(slovo);
+        tekst[pozicija] = velikoSlovo; 
+
+        pozicija = tekst.find_first_of(".!?", pozicija + 1);
+
+        if (pozicija != string::npos) {
+            pozicija = tekst.find_first_not_of(' ', pozicija + 1); 
+        }
+    }
+
+    cout << tekst << endl;
+
+
+    return 0;
+
+    /*if(pozicija != string::npos) {
+    char znak = tekst[pozicija];
+    char velikoSlovo = toupper(znak);
+    tekst[pozicija] = velikoSlovo; 
+    }
+    cout << tekst << endl; */
+
+  /*  for (char znak : tekst) {
 
         char velikoslovo = toupper(znak);
 
         cout << velikoslovo;
     }
 
-    cout << endl;
-    
-    return 0;
+    cout << endl;*/
+ 
 
 
     //double hipotenuza = sqrt(str1 * str1 + str2 * str2);

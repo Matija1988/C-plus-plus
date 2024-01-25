@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <cmath>
+#include <string>
 using namespace std;
 
 int main()
 {
-    cout << "Unesi duljinu prve stranice trokuta: ";
+    /*cout << "Unesi duljinu prve stranice trokuta: ";
     double str1; 
     cin >> str1;
 
@@ -15,8 +16,52 @@ int main()
     double str2; 
     cin >> str2; 
 
-    double hipotenuza = sqrt(str1 * str1 + str2 * str2);
-    cout << "Hipotenuza: " << hipotenuza << endl; 
+    double str3;
+
+    if (str1 > str2) {
+
+        str3 = sqrt(str1 * str1 - str2 * str2); 
+         
+    }
+    else {
+
+        str3 = sqrt(str1 * str1 + str2 * str2);
+    }
+
+    cout << "Stranica 3: " << str3 << endl; */
+
+    cout << "Upisi neki tekst: ";
+    string tekst;
+    getline(cin, tekst);
+
+    for (char znak : tekst) {
+
+        char velikoslovo = toupper(znak);
+
+        cout << velikoslovo;
+    }
+
+    cout << endl;
+    
+    return 0;
+
+
+    //double hipotenuza = sqrt(str1 * str1 + str2 * str2);
+    //cout << "Hipotenuza: " << hipotenuza << endl; 
+
+    //cout << "Kakluliramo sinus! Unesi broj: ";
+    //double a;
+    //cin >> a;
+
+    //double sinus = sin(a); 
+    //cout << "Sinus unesenog broja: " << sinus << endl;
+
+    //cout << "Kakluliramo cosinus! Unesi broj: ";
+    //double b; 
+    //cin >> b;
+
+    //double cosinus = cos(b); 
+    //cout << "Cosinus unesenog broja: " << cosinus << endl; 
 
 }
 

@@ -5,8 +5,11 @@
 #include <cmath>
 #include <string>
 #include <iomanip>
+#include <random>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono; 
 
 int main()
 {
@@ -146,7 +149,24 @@ int main()
 
     }
 
+    cout << endl;
+    cout << "*******************************************************" << endl;
+    cout << "************ >> OSNOVE D&D MEHANIKE << ****************" << endl;
+    cout << "*******************************************************" << endl;
 
+    
+    auto seed = system_clock::now().time_since_epoch().count(); 
+    default_random_engine generator(static_cast<unsigned>(seed));
+
+    int najmanji = 1; 
+    int d20 = 20;
+
+    uniform_int_distribution<int> hitDice(najmanji, d20);
+    int result = hitDice(generator);
+
+    //cout << result << endl; 
+
+    cout << "Kraj" << endl; 
 
     return 0;
     /*cout << "Unesi duljinu prve stranice trokuta: ";

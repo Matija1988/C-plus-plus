@@ -4,10 +4,134 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <iomanip>
+
 using namespace std;
 
 int main()
 {
+    cout << "Upisi broj:";
+    int a;
+    cin >> a; 
+
+    bool parNepar; 
+
+    if (a % 2 == 0) {
+        cout << "Broj " << a << " broj je paran" << endl;
+        parNepar = true;
+    }
+    else {
+        cout << "Broj " << a << " je neparan" << endl;
+        parNepar = false; 
+    }
+
+    switch (parNepar) {
+    
+    case 0:
+        cout << "Uneseni broj je neparan. Switch case!" << endl;
+        break;
+    case 1: 
+        cout << "Uneseni broj je paran. Switch case!" << endl;
+        break;
+    default:
+        break; 
+    
+    }
+
+    cout << "Unesi drugi broj:";
+    int b;
+    cin >> b; 
+
+    int min = a;
+    int max = b; 
+
+    min = (a < b) ? a : b;
+    cout << min << endl;
+    max = (a > b) ? a : b;
+    cout << max << endl; 
+ 
+    for (int i = min; i <= max; i++) {
+        cout << i << " "; 
+    }
+
+    cout << endl; 
+    cout << "Neparni brojevi: " << endl; 
+
+    for (int i = min; i <= max; i++) {
+
+        if (i % 2 != 0) {
+
+            cout << i << " ";
+            
+        }
+        
+    }
+   
+    cout << endl;
+    cout << "Parni brojevi: " << endl;
+  
+    for (int i = min; i <= max; i++) {
+
+        if (i % 2 != 0) {
+
+            continue; 
+
+        }
+        cout << i << " ";
+    }
+
+    cout << endl;
+    cout << "Tablica mnozenja od " << a << " do " << b << endl;
+
+    for (int i = min; i <= max; i++) {
+
+        for (int j = min; j <= max; j++) {
+
+            cout << setw (5) << i * j;
+             
+        }
+        cout << endl;
+
+    }
+
+    cout << endl;
+    cout << "Tablica mnozenja u donjem lijevom kutu" << endl;
+
+  
+
+    for (int i = 1; i <= 10; i++) {
+        int adapterI = 2;
+
+       
+        for (int j = 1; j <= i; j++) {
+
+            cout << setw(5) << i * j;
+            
+        }
+        cout << endl;
+        
+    }
+
+
+    cout << endl;
+    cout << "Tablica mnozenja u gornjem desnom kutu" << endl;
+
+    for (int i = 10; i >= 1; i--) {
+        int adapterI = 2;
+
+
+        for (int j = 10; j >= i; j--) {
+
+            cout << setw(5) << i * j;
+
+        }
+        cout << endl;
+
+    }
+
+
+
+    return 0;
     /*cout << "Unesi duljinu prve stranice trokuta: ";
     double str1; 
     cin >> str1;
@@ -30,7 +154,7 @@ int main()
 
     cout << "Stranica 3: " << str3 << endl; */
 
-    cout << "Upisi neki tekst: ";
+    /*cout << "Upisi neki tekst: ";
     string tekst;
     getline(cin, tekst);
 
@@ -54,7 +178,7 @@ int main()
     cout << tekst << endl;
 
 
-    return 0;
+    return 0;*/
 
     /*if(pozicija != string::npos) {
     char znak = tekst[pozicija];

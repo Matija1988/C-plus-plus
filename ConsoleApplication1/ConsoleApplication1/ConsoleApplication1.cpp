@@ -100,8 +100,7 @@ int main()
   
 
     for (int i = 1; i <= 10; i++) {
-        int adapterI = 2;
-
+        
        
         for (int j = 1; j <= i; j++) {
 
@@ -116,15 +115,33 @@ int main()
     cout << endl;
     cout << "Tablica mnozenja u gornjem desnom kutu" << endl;
 
-    for (int i = 10; i >= 1; i--) {
-        int adapterI = 2;
+    for (int i = 1; i <= 10; i++) {
+       
+        int a = 1;
+        int b = 1;
 
 
-        for (int j = 10; j >= i; j--) {
+        for (int l = 1; l <= i; l++) {
 
-            cout << setw(5) << i * j;
+            cout << setw(5) << " ";
 
+            b++;
         }
+      
+        for (int j = 10; j > i; j--) {
+
+          
+
+            cout << setw(5) << a * b;
+
+            a++;
+         
+
+           
+        }
+
+       
+
         cout << endl;
 
     }
